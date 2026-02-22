@@ -32,7 +32,7 @@ imageUpload.addEventListener("change", function () {
   const storageRef = firebase.storage().ref("images/merben.jpg");
   storageRef.put(file).then(() => {
     storageRef.getDownloadURL().then((url) => {
-      princeImage.src = url;
+      merbenImage.src = url;
       firebase.database().ref("message").update({ imageUrl: url });
     });
   });
@@ -69,3 +69,4 @@ shareBtn.addEventListener("click", () => {
     });
   });
 });
+
