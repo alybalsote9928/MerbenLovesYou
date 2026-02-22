@@ -281,5 +281,6 @@ body h2 {
 }
 
 #modalTitle:focus {
-    border-bottom: 2px dashed #f08080;
+    border-bottom: 2px dashed #CF9FFF;
+
 }
