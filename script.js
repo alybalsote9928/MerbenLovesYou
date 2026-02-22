@@ -36,14 +36,6 @@ imageUpload.addEventListener("change", function () {
     merbenImage.src = this.result;
   };
   reader.readAsDataURL(file);
-
-  const storageRef = firebase.storage().ref("images/merben.jpg");
-  storageRef.put(file).then(() => {
-    storageRef.getDownloadURL().then((url) => {
-      merbenImage.src = url;
-      firebase.database().ref("message").update({ imageUrl: url });
-    });
-  });
 });
 
 shareBtn.addEventListener("click", () => {
@@ -77,5 +69,6 @@ shareBtn.addEventListener("click", () => {
     });
   });
 });
+
 
 
